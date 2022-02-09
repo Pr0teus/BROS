@@ -1,0 +1,12 @@
+name: Consulta Operadora Celular e Portabilidade.
+url: https://consultanumero.abrtelecom.com.br/consultanumero/consulta/consultaHistoricoRecenteCtg
+captcha: true
+inputs:
+  CELLPHONE:
+    type: input
+    field: tn_0
+click: idSubmit
+results:
+  ORIGIN_CELLPHONEOPERATOR:
+    type: table
+    xpath: //*[@id="resultado"]

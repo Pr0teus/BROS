@@ -1,0 +1,29 @@
+name: Consulta Restituição Imposto de Renda
+url: http://servicos.receita.fazenda.gov.br/servicos/consrest/atual.app/paginas/mobile/restituicaomobi.asp
+captcha: true
+source: imgCaptcha
+response: txtTexto_captcha_serpro_gov_br
+inputs:
+  CPF:
+    type: input
+    field: cpf
+  BIRTHDATE:
+    type: input
+    field: data_nascimento
+  YEAR:
+    type: select
+    field: exercicio
+click: btnConsultaAvancar
+results:
+  FULL_NAME:
+    type: span
+    XPATH: //*[@id="nomeContribuinte"]
+  BANK:
+    type: span
+    XPATH: //*[@id="banco"]
+  BANK_AGENCY:
+    type: span
+    XPATH: //*[@id="agencia"]
+  IRPF_RESULTADO:
+    type: span
+    XPATH: //*[@id="resultado"]
