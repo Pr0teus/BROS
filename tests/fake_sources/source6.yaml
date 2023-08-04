@@ -1,0 +1,21 @@
+name: FakeSource6
+description: >
+  Fake data source 5
+kind:
+  URL: http://fakesite.com
+input:
+  and:
+    - CPF:
+        type: input
+        field: CELLPHONE  
+    - EMAIL:
+        type: input
+        field: CELLPHONE
+  or:
+    - MOTHER_NAME:
+        type: input
+        field: CELLPHONE
+returns:
+  NAME:
+    type: input
+    field: email

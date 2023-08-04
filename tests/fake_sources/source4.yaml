@@ -1,0 +1,17 @@
+name: FakeSource4
+description: >
+  Fake data source 4
+kind:
+  URL: http://fakesite.com
+input:
+  and:
+    - CELLPHONE:
+        type: input
+        field: CELLPHONE
+    - FATHER_NAME:
+        type: input
+        field: mother_name
+returns:
+  EMAIL:
+    type: input
+    field: email
