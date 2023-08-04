@@ -1,17 +1,17 @@
 name: Consulta Situação do CPF
-url: https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp
+kind:
+  url: https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp
 captcha: true
-source: imgCaptcha
-response: txtTexto_captcha_serpro_gov_br
-inputs:
-  CPF:
-    type: input
-    field: txtCPF
-  BIRTHDATE:
-    type: input
-    field: txtDataNascimento
+input:
+  and:
+    - CPF:
+        type: input
+        field: txtCPF
+    - BIRTHDATE:
+        type: input
+        field: txtDataNascimento
 click: id_submit
-results:
+returns:
   FULL_NAME:
     type: span
     XPATH: //*[@id="mainComp"]/div[2]/p/span[2]/b

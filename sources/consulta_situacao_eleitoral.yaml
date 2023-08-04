@@ -1,14 +1,16 @@
 name: Consulta Situação Eleitoral
-url: https://www.tse.jus.br/eleitor/titulo-e-local-de-votacao/copy_of_consulta-por-nome
+kind:
+  url: https://www.tse.jus.br/eleitor/titulo-e-local-de-votacao/copy_of_consulta-por-nome
 captcha: true
 source: imgCaptcha
 response: txtTexto_captcha_serpro_gov_br
-inputs:
-  CPF:
-    type: input
-    field: nomeTituloCPF
+input:
+  or:
+    - CPF:
+        type: input
+        field: nomeTituloCPF
 click: consultar-local-votacao-form-submit
-results:
+returns:
   ELECTION_BIOMETRY_COLLECTED:
     type: text
     XPATH: /html/body/main/div/div/div[1]/div/div/main/section/div/div/text()

@@ -1,10 +1,11 @@
 name: Vivo Recuperar E-mail parcial
 url: https://login.vivo.com.br/loginmarca/appmanager/marca/publico?_nfpb=true&_st=&_pageLabel=pages_publico_esqueceuEmailPage_page#
 captcha: false
-inputs:
-  CPF:
-    type: input
-    field: T173601863241459582864875{actionForm.nrDocumento}
+input:
+  or:
+    - CPF:
+        type: input
+        field: T173601863241459582864875{actionForm.nrDocumento}
 click: btn_recuperar_email
 results:
   PARTIAL_EMAIL:

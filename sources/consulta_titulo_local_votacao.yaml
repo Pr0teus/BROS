@@ -3,19 +3,20 @@ url: https://www.tse.jus.br/eleitor/titulo-e-local-de-votacao/consulta-por-nome
 captcha: true
 source: imgCaptcha
 response: txtTexto_captcha_serpro_gov_br
-inputs:
-  FULL_NAME:
-    type: input
-    field: nomeTituloCPF
-  BIRTH_DATE:
-    type: input
-    field: dataNascimento
-  MOTHER_NAME:
-    type: input
-    field: nomeMae
+input:
+  and:
+    - FULL_NAME:
+        type: input
+        field: nomeTituloCPF
+    - BIRTHDATE:
+        type: input
+        field: dataNascimento
+    - MOTHER_NAME:
+        type: input
+        field: nomeMae
   
 click: consultar-local-votacao-form-submit
-results:
+returns:
   ELECTION_BIOMETRY_COLLECTED:
     type: text
     XPATH: /html/body/main/div/div/div[1]/div/div/main/section/div/div/text()

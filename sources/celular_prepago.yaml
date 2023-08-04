@@ -1,11 +1,16 @@
 name: Consulta Celular Pre-pago
-url: https://cadastropre.com.br/#consultation
+kind:
+  url: https://cadastropre.com.br/#consultation
 captcha: true
-inputs:
-  CPF:
-    type: input
-    field: cpf
-results:
-  CELLPHONE_OPERADORA:
+input:
+  or:
+    - CPF:
+        type: input
+        field: cpf
+returns:
+  HAS_PREPAID_CELLPHONE:
+    type: table
+    XPATH: //*[@id="consultation"]/div[1]/form/div[2]/div[2]/div/table
+  PREPAID_CELLPHONE_OPERADORA:
     type: table
     XPATH: //*[@id="consultation"]/div[1]/form/div[2]/div[2]/div/table

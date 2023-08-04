@@ -3,18 +3,20 @@ url: http://servicos.receita.fazenda.gov.br/servicos/consrest/atual.app/paginas/
 captcha: true
 source: imgCaptcha
 response: txtTexto_captcha_serpro_gov_br
-inputs:
-  CPF:
-    type: input
-    field: cpf
-  BIRTHDATE:
-    type: input
-    field: data_nascimento
-  YEAR:
-    type: select
-    field: exercicio
+input:
+  and:
+    - CPF:
+      type: input
+      field: cpf
+    - BIRTHDATE:
+      type: input
+      field: data_nascimento
+    - YEAR:
+      default: 2020
+      type: select
+      field: exercicio
 click: btnConsultaAvancar
-results:
+returns:
   FULL_NAME:
     type: span
     XPATH: //*[@id="nomeContribuinte"]
