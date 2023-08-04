@@ -2,6 +2,25 @@
 Brazilian OSINT Sources
 
 This is a basic specification of Brazilian Open Source Information Sources, pre-compiled with requirements and what kind of information it can provide.
+The main objective of this repo is to answer the question: If I have a CPF what kind of information i can discover? or if I have a CPF and BIRTHDATE what else can I get ?
+
+# How to test:
+1. pip install virtualenv
+2. virtualenv venv
+3. source venv/bin/activate
+4. pip install -r requirements.txt
+5. python3 kkk.py --help
+
+# With docker
+1. docker build -t neo4j .
+2. docker run -d -p 7474:7474 -p 7473:7473 -p 7687:7687 --name neo4j_container neo4j
+
+# Some examples:
+* python3 kkk.py --data-source ./tests/fake_sources --show-fields show all fields that you can get from fake_sources
+* python3 kkk.py --data-source ./tests/fake_sources --graph image.png = write an image with the graph
+* python3 kkk.py --data-source ./tests/fake_sources --neo4j ./config.yaml = write the graph into neo4j for posterior analysis.
+
+You can change the ./tests/fake_sources to ./data/Brazil
 
 ## How to contribute
 
@@ -10,7 +29,7 @@ If you find a new source write in Yaml you can write a Pull Request with the fol
     * description: What you can derive from the returns.
     * kind:
         * URL: the URL you should go to get information
-        * whastapp: the WhatsApp number
+        * whatsapp: the WhatsApp number
         * SMS: the SMS number
     * captcha: if there is a captcha
     * inputs: A list of fields that are necessary to grab the information (See data definitions)
