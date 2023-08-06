@@ -6,15 +6,15 @@ response: txtTexto_captcha_serpro_gov_br
 input:
   and:
     - CPF:
-      type: input
-      field: cpf
+        type: input
+        field: cpf
     - BIRTHDATE:
-      type: input
-      field: data_nascimento
+        type: input
+        field: data_nascimento
     - YEAR:
-      default: 2020
-      type: select
-      field: exercicio
+        default: 2020
+        type: select
+        field: exercicio
 click: btnConsultaAvancar
 returns:
   FULL_NAME:
