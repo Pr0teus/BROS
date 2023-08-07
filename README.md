@@ -20,7 +20,7 @@ The main objective of this repo is to answer the question: If I have a CPF what 
 * python3 kkk.py --data-source ./tests/fake_sources --graph image.png = write an image with the graph
 * python3 kkk.py --data-source ./tests/fake_sources --neo4j ./config.yaml = write the graph into neo4j for posterior analysis.
 
-You can change the ./tests/fake_sources to ./data/Brazil
+You can change the ./tests/fake_sources to ./sources/Brazil
 
 ## How to contribute
 
@@ -52,8 +52,8 @@ If you know how to code and want to improve the code, be my guest and write a PR
 
 ## ROADMAP
 
-[X] Add graph visualization to understand which info you can obtain with a piece of information
-[ ] Add more sources.
-[ ] Better data definitions to include Regex validations.
-[ ] Add subfilter by contexts(Eg: a CPF from SP will only look for sources that have SP in context.)
-[ ] Add Some browsing automation to get the data and bypass captchas with death by captcha.
+* [X] Add graph visualization to understand which info you can obtain with a piece of information
+* [ ] Add more sources.
+* [ ] Better data definitions to include Regex validations.
+* [ ] Add subfilter by contexts(Eg: a CPF from SP will only look for sources that have SP in context.)
+* [ ] Add Some browsing automation to get the data and bypass captchas with death by captcha.
