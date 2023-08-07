@@ -1,0 +1,11 @@
+name: Azul linhas Aereas
+description: Mostra se  o CPF possui conta no site da azul
+kind:
+  url: https://www.voeazul.com.br/br/pt/home
+input:
+  or:
+    - CPF:
+        type: input
+        field: cpf
+returns:
+  HAS_AZUL_ACCOUNT:

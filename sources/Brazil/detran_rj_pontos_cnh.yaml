@@ -1,0 +1,21 @@
+name: Consulta de Ponto da Carteira
+kind:
+  url: http://multas.detran.rj.gov.br/gaideweb2/consultaPontuacao
+captcha: true
+input:
+  and:
+    - CPF:
+        type: input
+        field: cpf
+    - CNH:
+        type: input
+        field: cnh
+    - UF:
+        type: select
+        field: uf
+        default: RJ
+returns:
+  NOME_COMPLETO:
+  PLACA_VEICULO:
+  DATA_HORA_MULTA:
+

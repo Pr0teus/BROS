@@ -1,0 +1,16 @@
+name: PIX
+input:
+  OR:
+    CPF:
+      type: input
+      field: data_nascimento
+    CNPJ:
+      type: input
+      field: data_nascimento
+    EMAIL:
+    CELLPHONE:
+returns:
+  NAME:
+  BANK_AGENCY:
+  BANK_ACCOUNT:
+  PARTIAL_CPF:

@@ -1,0 +1,11 @@
+name: Código de barras gás naturgy.
+description: >
+  Valor da conta de mês do consumo de gás na Empresa Naturgy. 
+  O Consumo de gás elevado pode revelar banho aquecido demorado, cozinhar refeições dentro de casa ou venda de alimentos para fora.
+kind:
+  whatsapp: +552199991-0000
+input:
+  and:
+    - CPF:
+returns:
+  MONTlY_COST_GAS:

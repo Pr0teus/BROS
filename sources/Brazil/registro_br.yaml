@@ -1,0 +1,13 @@
+name: Registro BR
+description: > 
+  Se o CPF tiver um dominio registrado no nome dele, o e-mail quase completo será mostrado, faltando apenas o tld.
+kind:
+  url: https://registro.br/login/
+input:
+  or:
+    - CPF:
+        type: input
+        field: login.user
+output:
+  PARTIAL_EMAIL:
+    masked_number: true

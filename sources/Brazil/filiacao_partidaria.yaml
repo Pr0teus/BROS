@@ -1,0 +1,11 @@
+name: Gerar certificação de Filiação partidaria
+url: https://filia-consulta.tse.jus.br/#/principal/certidao-gerar
+captcha: true
+input:
+  TITULO_ELEITOR:
+    type: input
+    field: 
+results:
+  FILIADO_PARTIDO:
+    type: text
+    XPATH: /html/body/main/div/div/div[1]/div/div/main/section/div/div/text()

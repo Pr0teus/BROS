@@ -1,0 +1,12 @@
+name: Fatura Elétrica Cemig
+description: >
+  Valor da conta de mês do consumo de energia elétrica. 
+  O Consumo de energia elétricas elevado pode revelar banho aquecido demorado, utilização de ar condicionado.
+kind:
+  whatsapp: +553135061160
+input:
+  and:
+    - CPF:
+    - BIRTHDATE:
+returns:
+  MONTlY_COST_ELETRICITY:

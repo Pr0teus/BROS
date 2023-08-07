@@ -1,0 +1,36 @@
+name: TSE Certidão de quitação eleitoral
+description: A certidão de quitação eleitoral mostra a zona e seção de votação, que normalmente é perto do domicilio.
+kind:
+  url: https://www.tse.jus.br/servicos-eleitorais/certidoes/certidao-de-quitacao-eleitoral
+captcha: true
+input:
+  and:
+    - FULL_NAME:
+        type: input
+        field: nomeEleitor
+    - CPF:
+        type: input
+        field: numeroTituloCPF
+    - BIRTHDATE:
+        type: input
+        field: dataNascimento
+    - MOTHER_NAME:
+        type: input
+        field: nomeMae
+    - FATHER_NAME:
+        type: input
+        field: nomePai
+click: consulta_quitacao_eleitoral_form_submit
+returns:
+  FULL_NAME:
+    type: span
+    XPATH: //*[@id="mainComp"]/div[2]/p/span[2]/b
+  TITULO_ELEITOR:
+    type: span
+    XPATH: //*[@id="mainComp"]/div[2]/p/span[4]/b
+  ZONA_VOTACAO:
+    type: span
+    XPATH: //*[@id="mainComp"]/div[2]/p/span[5]/b
+  SECAO_VOTACAO:
+    type: span
+    XPATH: //*[@id="mainComp"]/div[2]/p/span[5]/b

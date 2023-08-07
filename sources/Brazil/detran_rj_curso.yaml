@@ -1,0 +1,12 @@
+name: Consulta Certificado curso Especialização
+url: https://www.detran.rj.gov.br/_monta_aplicacoes.asp?cod=19&tipo=certificado_curso
+captcha: true
+input:
+  or:
+   - CPF:
+      type: input
+      field: EducacaoCPF
+
+returns:
+  CURSO_NOME:
+  DATA_CURSO:

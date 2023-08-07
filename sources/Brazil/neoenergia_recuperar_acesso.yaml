@@ -1,0 +1,14 @@
+name: Recuperar Acesso NeoEnergia
+description: >
+  Valor da conta de mês do consumo de gás na Empresa Naturgy. 
+  O Consumo de gás elevado pode revelar banho aquecido demorado, cozinhar refeições dentro de casa ou venda de alimentos para fora.
+kind:
+  URL: https://servicos.neoenergiacoelba.com.br/area-logada/paginas/esqueci-senha.aspx
+input:
+  and:
+    - CPF:
+        type: input
+        field: ctl00$SPWebPartManager1$g_90175432_8bc3_4c89_9455_04b8e074c3e6$ctl00$txtCNPJ_CPF
+returns:
+  PARTIAL_EMAIL:
+    masked_number: true
